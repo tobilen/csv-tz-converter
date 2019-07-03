@@ -4,7 +4,7 @@
 * Install node (version 10 or higher)
 * Run `npm install -g csv-tz-converter`
 * Then run the script on your input csv file 
-  `convert-timezone -f ./myInput.csv -i "Eastern Time" -t ./myOutput.csv`
+  `convert-timezone -f myInput.csv -i "Eastern Time" -t myOutput.csv`
 
 ### Arguments
 #### -f (or --file)
