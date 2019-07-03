@@ -2,9 +2,9 @@
 
 ### Quickstart:
 * Install node (version 10 or higher)
-* Install required packages with yarn (if installed) or npm install
+* Run `npm install -g csv-tz-converter`
 * Then run the script on your input csv file 
-  `node ./index -f ./myInput.csv -i "Eastern Time" -t ./myOutput.csv`
+  `convert-timezone -f ./myInput.csv -i "Eastern Time" -t ./myOutput.csv`
 
 ### Arguments
 #### -f (or --file)
