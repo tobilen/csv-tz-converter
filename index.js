@@ -8,6 +8,7 @@ const args = minimist(process.argv.slice(2), {
     f: 'file',
     t: 'target',
     i: 'input-timezone',
+    d: 'inpur-date-format',
   },
 });
 

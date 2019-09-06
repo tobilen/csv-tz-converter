@@ -10,6 +10,9 @@
 #### -f (or --file)
 Specifiy the path to the input file
 
+#### -d (or --input-date-format)
+Specify the format of the dates in the incoming file. Defaults to `MM/dd/yyyy`. Allowed values can be found here: https://date-fns.org/v2.0.1/docs/parse
+
 #### -i (or --input-timezone)
 Specify the Timezone the provided file was created in. Accepts IANA compatible timezone names. See https://gist.github.com/aviflax/a4093965be1cd008f172 for a full list
 
