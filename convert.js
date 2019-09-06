@@ -12,7 +12,7 @@ module.exports.default = args => {
   csv({ delimiter: ';' })
     .fromFile(args.file)
     .subscribe(line => {
-      let currentDate = spacetime(
+      const currentDate = spacetime(
         format(
           parse(
             line.Date,
@@ -29,11 +29,8 @@ module.exports.default = args => {
     Please either fix your format to match "MM/DD/YYYY" or pass a custom format`);
         return;
       }
-      currentDate = currentDate.time(line.Time);
-
-      const offset = currentDate.timezone().current.offset;
-
-      const shiftedDate = currentDate.subtract(offset, 'hours');
+      const currentDateTime = currentDate.time(line.Time);
+      const shiftedDate = currentDateTime.goto('UTC');
 
       return (convertedCsv = [
         ...convertedCsv,

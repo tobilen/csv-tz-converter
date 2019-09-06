@@ -12,11 +12,11 @@
   "author": "Tobias Lengsholz <tobias.lengsholz@invision.de>",
   "license": "MIT",
   "dependencies": {
-    "csvtojson": "^2.0.8",
-    "jest": "^24.1.0",
-    "json2csv": "^4.3.5",
+    "csvtojson": "^2.0.10",
+    "date-fns": "^2.1.0",
+    "jest": "^24.9.0",
+    "json2csv": "^4.5.2",
     "minimist": "^1.2.0",
-    "spacetime": "^6.0.1",
-    "date-fns": "^2.0.1"
+    "spacetime": "^6.0.1"
   }
 }
