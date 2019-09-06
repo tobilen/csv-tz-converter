@@ -637,6 +637,11 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
+date-fns@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.1.tgz#c5f30e31d3294918e6b6a82753a4e719120e203d"
+  integrity sha512-C14oTzTZy8DH1Eq8N78owrCWvf3+cnJw88BTK/N3DYWVxDJuJzPaNdplzYxDYuuXXGvqBcO4Vy5SOrwAooXSWw==
+
 debug@^2.1.2, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -2919,10 +2924,10 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-spacetime@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/spacetime/-/spacetime-5.4.0.tgz#6f0a4e24176d5c0825df03bccf76dfa0a417452a"
-  integrity sha512-0E76fB3c+rWi7y5NOWtBvUU+1nYMo2bleU61uukgi2e0HwuF5vnuhQpM0W57/xd9jkg2iz26HW0QHjPmtjf4pw==
+spacetime@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/spacetime/-/spacetime-6.0.1.tgz#68f71a51d5e8bdc9d7e43116f380af9c7eb88142"
+  integrity sha512-/X7kPBbVmVioeApFzzTLiVa/kYDn+VSqvnPfbt7du83qxOoRFmabQyNv5mJcKsTpHWFkrkU7RggX6wyCI/U2Ig==
 
 spdx-correct@^3.0.0:
   version "3.1.0"

@@ -31,3 +31,16 @@ TLS Inbound;24.04.2016;22:45;23;13;212
 TLS Inbound;25.04.2016;11:00;23;11;212
 TLS Inbound;25.04.2016;11:15;12;11;212`);
 });
+
+test("doesn't try to convert to september 31st", () => {
+  convert({
+    file: './__fixtures__/example_us_september.csv',
+    inputTimezone: 'Eastern Time',
+    target: './__fixtures__/target_us_september.csv',
+  });
+
+  const contents = fs.readFileSync('./__fixtures__/target_us_september.csv', 'utf8');
+
+  expect(contents).toEqual(`Queue;Date;Time;Offered;Handled;AHT;Channel
+Inbound;01.09.2018;03:00;0;0;0;calls`);
+});

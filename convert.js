@@ -1,5 +1,6 @@
 'use strict';
 const spacetime = require('spacetime');
+const { parse, toDate, format } = require('date-fns');
 const csv = require('csvtojson');
 const json2csv = require('json2csv').parse;
 const fs = require('fs');
@@ -11,7 +12,10 @@ module.exports.default = args => {
   csv({ delimiter: ';' })
     .fromFile(args.file)
     .subscribe(line => {
-      let currentDate = spacetime(line.Date, args['input-timezone']);
+      let currentDate = spacetime(
+        format(parse(line.Date, 'MM/dd/yyyy', new Date()), 'yyyy-MM-dd HH:mm:ss'),
+        args['input-timezone'],
+      );
 
       if (!currentDate.isValid()) {
         console.error(`Supplied invalid date. "${line.Date}" can not be parsed.
@@ -23,6 +27,7 @@ module.exports.default = args => {
       const offset = currentDate.timezone().current.offset;
 
       const shiftedDate = currentDate.subtract(offset, 'hours');
+
       return (convertedCsv = [
         ...convertedCsv,
         {
@@ -37,6 +42,6 @@ module.exports.default = args => {
       const opts = { fields, flatten: true, quote: '', delimiter: ';' };
 
       const csv = json2csv(convertedCsv, opts);
-      fs.writeFileSync(args.target, csv)
+      fs.writeFileSync(args.target, csv);
     });
 };
