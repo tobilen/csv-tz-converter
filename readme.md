@@ -21,5 +21,4 @@ Specify the path of the output file
 
 ### Current Limitations
 
-- Only MM/DD/YYYY date format
 - Only semicolon as separator
