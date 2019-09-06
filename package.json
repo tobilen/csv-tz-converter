@@ -1,6 +1,6 @@
 {
   "name": "csv-tz-converter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "script to convert the timezone of a csv file in injixo csv format",
   "main": "index.js",
   "bin": {
